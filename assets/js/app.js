@@ -150,7 +150,7 @@ function projectsGallery(){
 
   // 30 photos, 20 videos (اسماء ثابتة: p01..p30 / v01..v20)
   const items = [];
-  for(let i=1;i<=30;i++){
+  for(let i=1;i<=31;i++){
     const n = String(i).padStart(2,"0");
     items.push({ type:"photo", src:`assets/img/p${n}.jpg`, label:`صورة ${i}` });
   }
@@ -228,7 +228,7 @@ function projectsGallery(){
     if(shown >= list.length){
       btn.disabled = true;
       btn.classList.add("disabled");
-      btn.textContent = "لا يوجد المزيد";
+      btn.textContent = "شاهد المزيد في الانستجرام  ";
     }
 
     // re-run reveal observer on new nodes
@@ -249,7 +249,7 @@ function projectsGallery(){
       shown = 0;
       btn.disabled = false;
       btn.classList.remove("disabled");
-      btn.innerHTML = `<img class="ic" src="assets/icons/arrow.svg" alt=""> المزيد`;
+      btn.innerHTML = `<img class="ic" src="assets/icons/arrow.png" alt=""> المزيد`;
       renderMore();
     });
   });
